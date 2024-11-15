@@ -15,5 +15,9 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
-
+  data:
+    redis:
+      port: 6379
+      host: localhost
+      password: 1234
 
