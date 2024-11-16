@@ -37,8 +37,11 @@ Post 요청으로 받아온 회원의 인증 정보들을 내부적으로 인증
     1) 클라이언트 정보와 함께 OAuth 서버에 Get 요청을 보내, accessToken 발급에 필요한 code를 받음.
     2) 인증에 성공하여 code를 발급받고, 해당 코드로 다시 OAuth 서버에 POST 요청을 보내서 사용자의 정보를 얻음.
 
-🔎 연결 (.yml)
+🔎 OAuth, Security 설정 일부 (.yml)
+
 <img width="586" alt="image" src="https://github.com/user-attachments/assets/106a5303-6383-4a19-818d-5f0e05ac7307">
+
+<img width="768" alt="image" src="https://github.com/user-attachments/assets/c04e63dc-02d9-4be9-a41b-e435e9cdc2da">
 
 
 * * *
