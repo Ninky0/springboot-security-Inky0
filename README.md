@@ -35,7 +35,8 @@
       토큰 관리까지 맡는다면 **많은 부하**를 주게 된다.
 
 ### Docker
-실제로 Redis를 로컬 또는 생산 환경에 설치하고 설정하는 대신, Docker를 사용하였다. *(레디스를 처음 써보기도하지만, 마침, 도커를 막 배우기 시작했기에, 실습겸..사겸사)*
+실제로 Redis를 로컬 또는 생산 환경에 설치하고 설정하는 대신, Docker를 사용하였다. 
+*(레디스를 처음 써보기도하지만, 마침, 도커를 막 배우기 시작했기에, 실습겸..사겸사)*
 
 - Docker 사용 **장점**
   - 환경 일관성 : Docker는 "한 번 설정하면 어디서든 실행된다(Write Once, Run Anywhere)"를 보장한다. 이로 인해 개발, 테스트, 운영 환경 간의 차이로 인한 문제를 최소화할 수 있다.
@@ -48,7 +49,7 @@
   - 포트매핑 : 호스트와 컨테이너 간에 포트 매핑을 설정하여 외부에서 컨테이너의 서비스에 접근할 수 있다.
   - 볼륨 : 컨테이너가 삭제되어도 데이터는 유지된다.(데이터 영속성)
 <p> 🔎 연결 (.yml)</p>
-![image](https://github.com/user-attachments/assets/81e4eb8e-05d9-4baf-9247-9e9991b83469)
+![image](https://github.com/user-attachments/assets/c1a0ea67-ce70-4409-bc51-d0e293717cef)
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> 
