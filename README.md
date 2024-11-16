@@ -47,7 +47,7 @@
   - Redis 컨테이너 : 설치된 Redis 서버처럼 작동하지만, 실제로 호스트 시스템에는 Redis가 설치되지 않는다.
   - 포트매핑 : 호스트와 컨테이너 간에 포트 매핑을 설정하여 외부에서 컨테이너의 서비스에 접근할 수 있다.
   - 볼륨 : 컨테이너가 삭제되어도 데이터는 유지된다.(데이터 영속성)
-  🔎 <p>연결 (.yml)</p>
+<p> 🔎 연결 (.yml)</p>
 ![image](https://github.com/user-attachments/assets/81e4eb8e-05d9-4baf-9247-9e9991b83469)
 
 <h3 align="left">Languages and Tools:</h3>
