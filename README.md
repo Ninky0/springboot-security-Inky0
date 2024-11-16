@@ -1,7 +1,7 @@
 # 회원 관리
 **Point**
 - JWT 토큰
--⚠️Redis
+- Redis
 - OAuth2
 
 ## Access Token 만료 시간
