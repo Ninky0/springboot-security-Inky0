@@ -17,14 +17,14 @@
 1) AccessToken으로 RefreshToken을 조회
 2) 새로 발급한 AccessToken의 값으로 update
 
-  - MySQL보다 조회 수가 한 번 더 많은데?! 왜 선택을 했느냐??
-    - 캐싱용으로도 많이 쓰이는 만큼, Redis는 **읽기 속도**가 **매우 빠름**.
+    - MySQL보다 조회 수가 한 번 더 많은데?! 왜 선택을 했느냐??
+      - 캐싱용으로도 많이 쓰이는 만큼, Redis는 **읽기 속도**가 **매우 빠름**.
       
 ### ⚠️ MySQL
 - 스케줄러와 같은 프로그램을 만들어서 Refresh Token을 만료시켜줘야함.
 
 - 조회 (1번)
-AccessToken에서 추출한 이메일로 조회한 회원의 refresh Token이 있는지 확인
+1) AccessToken에서 추출한 이메일로 조회한 회원의 refresh Token이 있는지 확인
 
   - 한 번의 쿼리가 나가더라도 이 쿼리는 한 유저당 30분에 한번 실행됨.
 
