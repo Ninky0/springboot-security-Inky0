@@ -6,6 +6,19 @@
   - Docker
 
 ## OAuth2
+### OAuth2를 선택한 이유
+- 서비스의 자체 회원가입을 사용할 시, 서비스 제공자는 두 가지를 책임져야한다.
+  1) 회원이 기입한 개인 정보에 접근할 수 있는 중요 식별 정보를 관리해야 한다.
+  2) 회원이 아이디/비밀번호를 복구할 수 있는 방법을 제공해야 한다.
+
+OAuth2를 이용하면, 두 책임은 해당 OAuth2 서비스를 제공하는 플랫폼에 있다.
+↪ 본 서비스는 책임지지 않아도 되므로, 개발 생산성이 향상된다.
+
+- 사용자 경험 증가
+  서비스의 자체 회원가입을 사용할 시, 사용자에게 요구하는 입력 정보가 많아진다.
+
+OAuth2를 이용하면, 해당 OAuth2 서비스에서 기존에 사용하던 계정으로 로그인할 수 있다.
+↪ 본 서비스를 자연스럽게 사용할 수 있다.
 
 ## Access Token 만료 시간
 - Refresh Token을 클라이언트에서 관리할 시, 토큰을 탈취 당할 경우 꽤 긴 시간동안 탈취한 토큰을 이용하여 AccessToken을 재발급 받을 수 있다.
@@ -49,7 +62,7 @@
   - 포트매핑 : 호스트와 컨테이너 간에 포트 매핑을 설정하여 외부에서 컨테이너의 서비스에 접근할 수 있다.
   - 볼륨 : 컨테이너가 삭제되어도 데이터는 유지된다.(데이터 영속성)
 <p> 🔎 연결 (.yml)</p>
-![image](https://github.com/user-attachments/assets/c1a0ea67-ce70-4409-bc51-d0e293717cef)
+<img width="791" alt="image" src="https://github.com/user-attachments/assets/affe07ac-828e-411f-9fd8-1a8ce530e955">
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> 
