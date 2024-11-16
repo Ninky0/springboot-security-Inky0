@@ -39,9 +39,7 @@ Post 요청으로 받아온 회원의 인증 정보들을 내부적으로 인증
 
 🔎 OAuth, Security 설정 일부 (.yml)
 
-<img width="586" alt="image" src="https://github.com/user-attachments/assets/106a5303-6383-4a19-818d-5f0e05ac7307">
-
-<img width="768" alt="image" src="https://github.com/user-attachments/assets/c04e63dc-02d9-4be9-a41b-e435e9cdc2da">
+![image](https://github.com/user-attachments/assets/73e1ddff-86a8-42c9-8631-35624578ce7b)
 
 
 * * *
