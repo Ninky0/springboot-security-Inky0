@@ -16,7 +16,7 @@
   - 회원이 기입한 개인 정보에 접근할 수 있는 중요 식별 정보를 관리해야 한다.
   - 회원이 아이디/비밀번호를 복구할 수 있는 방법을 제공해야 한다.
    
-
+<br>
 👍 OAuth2를 이용하면, 해당 OAuth2 서비스에서 기존에 사용하던 계정으로 로그인할 수 있다.
 
 ➔ 본 서비스를 자연스럽게 사용할 수 있어, 사용자 경험이 증가한다.
@@ -24,11 +24,11 @@
 
 - 서비스의 자체 회원가입을 사용할 시, 사용자에게 요구하는 입력 정보가 많아진다.
 
-
+<br>
 ## Access Token 만료 시간
 - Refresh Token을 클라이언트에서 관리할 시, 토큰을 탈취 당할 경우 꽤 긴 시간동안 탈취한 토큰을 이용하여 AccessToken을 재발급 받을 수 있다.
 - Access Token을 탈취 당할 경우, 토큰을 만료시킬 방법이 없으므로 -> Access Token 만료 시간을 짧게 설정했다. (30분)
-
+<br>
 ## Refresh Token 관리 방법 (DB)
 ### ✅ Redis - 채택
 - TTL(Time-To-Live) : 저장한 데이터를 TTL 설정에 따라서 **자동으로 삭제** 해준다.
@@ -40,7 +40,7 @@
 
     - MySQL보다 조회 수가 한 번 더 많은데?! 왜 선택을 했느냐??
       - 캐싱용으로도 많이 쓰이는 만큼, Redis는 **읽기 속도**가 **매우 빠름**.
-      
+<br>      
 ### ⚠️ MySQL
 - 스케줄러와 같은 프로그램을 만들어서 Refresh Token을 만료시켜줘야한다.
 
@@ -55,12 +55,12 @@
 ### Docker
 실제로 Redis를 로컬 또는 생산 환경에 설치하고 설정하는 대신, Docker를 사용하였다. 
 *(레디스를 처음 써보기도하지만, 마침, 도커를 막 배우기 시작했기에, 실습겸..사겸사)*
-
+<br>
 - Docker 사용 **장점**
   - 환경 일관성 : Docker는 "한 번 설정하면 어디서든 실행된다(Write Once, Run Anywhere)"를 보장한다. 이로 인해 개발, 테스트, 운영 환경 간의 차이로 인한 문제를 최소화할 수 있다.
   - 간편한 관리 : 복잡한 설치 및 구성 과정 없이 Docker Hub와 같은 Registry에서 이미지를 가져와 간편하게 어플리케이션을 배포 및 실행할 수 있다.
   - 리소스 효율성 : 컨테이너는 가상 머신보다 훨씬 적은 자원을 사용하며, 더 빠르게 시작할 수 있다.
-
+<br>
 - Docker와 Redis
   - 'redis:alpine' 이미지 : Redis 서버와 그 실행에 필요한 최소한의 Alpine Linux 환경을 포함한다.
   - Redis 컨테이너 : 설치된 Redis 서버처럼 작동하지만, 실제로 호스트 시스템에는 Redis가 설치되지 않는다.
@@ -68,7 +68,7 @@
   - 볼륨 : 컨테이너가 삭제되어도 데이터는 유지된다.(데이터 영속성)
 <p> 🔎 연결 (.yml)</p>
 <img width="791" alt="image" src="https://github.com/user-attachments/assets/affe07ac-828e-411f-9fd8-1a8ce530e955">
-
+<br>
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> 
     <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> 
