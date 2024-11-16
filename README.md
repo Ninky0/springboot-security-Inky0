@@ -1,13 +1,14 @@
 # 회원 관리
 **Point**
-- OAuth2
+- OAuth 2.0
+  - Spring Security
 - JWT 토큰
 - Redis
   - Docker
-
-## OAuth2
-### OAuth2를 선택한 이유
-👍 OAuth2를 이용하면, 아래의 두 책임은 해당 OAuth2 서비스를 제공하는 플랫폼에 있다.
+* * *
+## OAuth 2.0
+**OAuth 2를 선택한 이유**
+👍 OAuth 2를 이용하면, 아래의 두 책임은 해당 OAuth 2 서비스를 제공하는 플랫폼에 있다.
 
 ➔ 본 서비스는 책임지지 않아도 되므로, 개발 생산성이 향상된다.
 
@@ -17,7 +18,7 @@
   - 회원이 아이디/비밀번호를 복구할 수 있는 방법을 제공해야 한다.
    
 
-👍 OAuth2를 이용하면, 해당 OAuth2 서비스에서 기존에 사용하던 계정으로 로그인할 수 있다.
+👍 OAuth2를 이용하면, 해당 OAuth 2 서비스에서 기존에 사용하던 계정으로 로그인할 수 있다.
 
 ➔ 본 서비스를 자연스럽게 사용할 수 있어, 사용자 경험이 증가한다.
 
@@ -25,12 +26,30 @@
 - 서비스의 자체 회원가입을 사용할 시, 사용자에게 요구하는 입력 정보가 많아진다.
 
 
+### Spring Secutiry & OAuth 2.0
+Spring Security를 이용하면 OAuth 2.0 인증을 진행하는 필터에서 OAuth 서버에서 받아온 code로 Post 요청을 보내고,
+Post 요청으로 받아온 회원의 인증 정보들을 내부적으로 인증 객체에 매핑시켜준다.
+
+따라서 사용자의 입장에서는 소셜 로그인 버튼을 눌러서 로그인하면 바로 로그인이 되는 것 같이 보이기때문에 사용자 경험이 매우 증가한다.
+
+- Spring Secutiry를 사용하지 않는다면?
+  - 2번의 요청을 통해 사용자 정보를 얻어올 수 있다.
+    1) 클라이언트 정보와 함께 OAuth 서버에 Get 요청을 보내, accessToken 발급에 필요한 code를 받음.
+    2) 인증에 성공하여 code를 발급받고, 해당 코드로 다시 OAuth 서버에 POST 요청을 보내서 사용자의 정보를 얻음.
+
+🔎 연결 (.yml)
+<img width="586" alt="image" src="https://github.com/user-attachments/assets/106a5303-6383-4a19-818d-5f0e05ac7307">
+
+
+* * *
+
 ## Access Token 만료 시간
 
 - Refresh Token을 클라이언트에서 관리할 시, 토큰을 탈취 당할 경우 꽤 긴 시간동안 탈취한 토큰을 이용하여 AccessToken을 재발급 받을 수 있다.
 
 - Access Token을 탈취 당할 경우, 토큰을 만료시킬 방법이 없으므로 -> Access Token 만료 시간을 짧게 설정했다. (30분)
 
+* * *
 
 ## Refresh Token 관리 방법 (DB)
 ### ✅ Redis - 채택
@@ -72,9 +91,13 @@
   - Redis 컨테이너 : 설치된 Redis 서버처럼 작동하지만, 실제로 호스트 시스템에는 Redis가 설치되지 않는다.
   - 포트매핑 : 호스트와 컨테이너 간에 포트 매핑을 설정하여 외부에서 컨테이너의 서비스에 접근할 수 있다.
   - 볼륨 : 컨테이너가 삭제되어도 데이터는 유지된다.(데이터 영속성)
+
+<br>
 <p> 🔎 연결 (.yml)</p>
 <img width="791" alt="image" src="https://github.com/user-attachments/assets/affe07ac-828e-411f-9fd8-1a8ce530e955">
-<br>
+
+* * *
+
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> 
     <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> 
