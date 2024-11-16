@@ -26,7 +26,9 @@
 
 <br>
 ## Access Token 만료 시간
+
 - Refresh Token을 클라이언트에서 관리할 시, 토큰을 탈취 당할 경우 꽤 긴 시간동안 탈취한 토큰을 이용하여 AccessToken을 재발급 받을 수 있다.
+
 - Access Token을 탈취 당할 경우, 토큰을 만료시킬 방법이 없으므로 -> Access Token 만료 시간을 짧게 설정했다. (30분)
 <br>
 ## Refresh Token 관리 방법 (DB)
