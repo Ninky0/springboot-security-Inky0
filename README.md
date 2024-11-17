@@ -1,7 +1,7 @@
 # 회원 관리
 ## flow - chart
 (이미지 준비하면 바로 업데이트하겠습니당~)
-
+* * *
 **Point**
 - OAuth 2.0
   - Spring Security
