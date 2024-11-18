@@ -1,6 +1,7 @@
 # 회원 관리
 ## flow - chart
-![image]("https://github.com/user-attachments/assets/e022ad4e-602c-431c-99e8-d3585c01d3cc")
+![image](https://github.com/user-attachments/assets/85c063b0-f8d5-4cd6-8dfc-eb1a04d3b50e)
+
 * * *
 **Point**
 - OAuth 2.0
