@@ -1,6 +1,11 @@
 # 회원 관리
 ## flow - chart
-(이미지 준비하면 바로 업데이트하겠습니당~)
+[카카오]
+
+![image](https://github.com/user-attachments/assets/7165b2ae-1435-4453-bf2a-51ebeec46043)
+
+[구글]
+
 * * *
 **Point**
 - OAuth 2.0
