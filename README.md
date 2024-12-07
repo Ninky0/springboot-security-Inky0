@@ -103,6 +103,20 @@ Post 요청으로 받아온 회원의 인증 정보들을 내부적으로 인증
 <p> 🔎 연결 (.yml)</p>
 <img width="791" alt="image" src="https://github.com/user-attachments/assets/affe07ac-828e-411f-9fd8-1a8ce530e955">
 
+Redis docker-compose.yml 파일에 {사용할 비밀번호}를 입력하시고, docker-compose up -d 해주세요.
+'''
+version: '3.7'
+services:
+  redis-refresh-token:
+    image: redis:alpine
+    command: redis-server /usr/local/etc/redis-refresh-token/redis.conf --requirepass {사용할 비밀번호}
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data/refresh-token-data:/data
+      - ./data/refresh-token-data/redis.conf:/usr/local/etc/redis-refresh-token/redis.conf
+'''
+
 * * *
 
 <h3 align="left">Languages and Tools:</h3>
